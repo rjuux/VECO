@@ -1,12 +1,6 @@
-// Simple scroll reveal animation
-const cards = document.querySelectorAll('.card');
-
-window.addEventListener('scroll', () => {
-    cards.forEach(card => {
-        const cardTop = card.getBoundingClientRect().top;
-        if (cardTop < window.innerHeight - 50) {
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-        }
-    });
+// Loader
+window.addEventListener("load", () => {
+    const loader = document.getElementById("loader");
+    loader.style.opacity = "0";
+    setTimeout(() => loader.style.display = "none", 600);
 });
